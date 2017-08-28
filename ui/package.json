@@ -1,0 +1,31 @@
+{
+  "name": "datar",
+  "description": "Vue.js inteface with Golang API and MySql.",
+  "version": "1.0.0",
+  "author": "Licurg",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+  },
+  "dependencies": {
+    "vue": "*",
+    "vue-resource": "*"
+  },
+  "devDependencies": {
+    "babel-core": "*",
+    "babel-loader": "*",
+    "babel-preset-env": "*",
+    "cross-env": "*",
+    "css-loader": "*",
+    "file-loader": "*",
+    "http-proxy-middleware": "*",
+    "node-sass": "*",
+    "sass-loader": "*",
+    "vue-loader": "*",
+    "vue-router": "*",
+    "vue-template-compiler": "*",
+    "webpack": "*",
+    "webpack-dev-server": "*"
+  }
+}

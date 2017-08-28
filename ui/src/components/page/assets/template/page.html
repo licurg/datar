@@ -1,0 +1,39 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <h3 class="text-center mt-5">DATAR - простий приклад оперування над данними (Vue.js, GO, SQLite).</h3>
+      <p class="lead text-muted text-center mt-3">Додавання, видалення, правка у live-режимі.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <table class="table table-hover table-inverse mt-5">
+        <thead>
+          <tr>
+            <th>ID:</th>
+            <th>Ім'я:</th>
+            <th>Прізвище:</th>
+            <th>Email:</th>
+            <th>Дії:</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="user in users">
+            <th scope="row">{{user.id}}</th>
+            <td><input @change="ChangeData" class="table-input" type="text" :placeholder="user.name" :value="user.name" name="name" :rid="user.id"></td>
+            <td><input @change="ChangeData" class="table-input" type="text" :placeholder="user.surname" :value="user.surname" name="surname" :rid="user.id"></td>
+            <td><input @change="ChangeData" class="table-input" type="email" :placeholder="user.email" :value="user.email" name="email" :rid="user.id"></td>
+            <td>
+              <button @click="DeleteUser(user.id)" type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="Видалення"><i class="icon ion-close"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button @click="PostUser()" type="button" class="btn btn-info" data-toggle="tooltip" data-placement="right" title="Видалення"><i class="icon ion-plus"></i></button>
+    </div>
+  </div>
+</div>
