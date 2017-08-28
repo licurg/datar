@@ -6,3 +6,5 @@ For starting make in terminal
 and
 # go run server.go
 in another terminal window.
+
+And open http://localhost:8080/ in your browser.
